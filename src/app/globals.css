@@ -120,3 +120,39 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* 出現動畫 */
+@keyframes slide-in {
+  0% {
+      opacity: 0;
+      transform: translateX(-10px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* 消失動畫 */
+@keyframes slide-out {
+  0% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+  100% {
+      opacity: 0;
+      transform: translateX(-10px);
+  }
+}
+
+/* 預設狀態：隱藏並準備消失動畫 */
+.arrow-animation {
+  display: none; /* 初始隱藏 */
+  animation: slide-out 0.5s ease-in-out forwards; /* 消失動畫 */
+}
+
+/* Hover 時：顯示並觸發出現動畫 */
+.group:hover .arrow-animation {
+  display: block; /* 顯示 */
+  animation: slide-in 0.3s ease-in-out forwards; /* 出現動畫 */
+}
