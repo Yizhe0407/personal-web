@@ -36,7 +36,10 @@ export default function TopBar() {
               <AvatarImage src="https://github.com/shadcn.png" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
-            <h2 className="text-xl font-bold text-gray-800">Liao Yizhe</h2>
+            <div className=" flex-col text-start">
+              <h2 className="text-lg font-bold text-gray-800">Liao Yizhe</h2>
+              <p className=" text-xs text-gray-500 font-bold">Web Developer and Student</p>
+            </div>
           </div>
           <button onClick={toggleMenu}>
             {isOpen ? <X className="text-gray-500" /> : <Menu className="text-gray-500" />}

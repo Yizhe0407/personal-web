@@ -43,7 +43,10 @@ export default function Sidebar() {
             <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-          <h2 className="text-xl font-bold text-gray-800 hidden lg:inline">Liao Yizhe</h2>
+          <div className=" flex-col hidden lg:block  text-center">
+            <h2 className="text-lg font-bold text-gray-800">Liao Yizhe</h2>
+            <p className=" text-xs text-gray-500 font-bold">Web Developer and Student</p>
+          </div>
         </div>
 
         {/* 導航列表 */}
