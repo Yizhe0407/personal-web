@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
 import { Geist, Geist_Mono } from "next/font/google"
 import { Provider } from "@/lib/Context";
+import TopBar from "@/components/TopBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,13 +28,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#f7f7f7] flex justify-center gap-12 p-8`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#f7f7f7]`}
       >
         <Provider>
-          <div className="fixed top-8 sm:left-8 w-full px-6 sm:px-0 h-[1000px]">
-            <Sidebar />
+          <div className="flex flex-col w-full h-screen">
+            <div className="flex flex-1 overflow-hidden">
+              <TopBar />
+              <Sidebar />
+              <div className="flex flex-1 justify-center py-32 sm:py-8 w-full h-full px-6 overflow-y-auto paragraph">
+                <div className="flex flex-col">
+                  {children}
+                  <div className="flex justify-center w-full mt-4 font-bold text-gray-500">© 2023 liao yizhe</div>
+                  <div className="flex justify-center w-full font-bold text-gray-500">　</div>
+                </div>
+              </div>
+            </div>
           </div>
-          {children}
         </Provider>
 
       </body>
