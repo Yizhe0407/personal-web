@@ -47,7 +47,7 @@ export default function TopBar() {
         </div>
 
         {isOpen && (
-          <div className="w-full mt-2">
+          <div className="w-full mt-6">
             {/* 導航列表 */}
             <nav className="flex flex-col gap-4">
               {navList.map((item) => {
