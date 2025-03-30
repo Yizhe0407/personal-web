@@ -3,7 +3,7 @@ import ProjectCard from "@/components/ProjectCard";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-6 w-full">
+    <div className="flex flex-col gap-6 w-full pt-32 pb-4 sm:p-8">
       <h1 className="text-3xl sm:text-4xl font-bold">Hey👋, I&apos;m Yizhe</h1>
 
       <p className="text-gray-500 font-bold">
