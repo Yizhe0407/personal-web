@@ -1,5 +1,6 @@
 // app/projects/[slug]/page.tsx
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 // 模擬你的專案資料（實際應用中可以從 API 或資料庫獲取）
@@ -32,9 +33,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 className="w-full max-w-lg rounded-xl mb-4" 
             />
             <p className="text-lg">{project.description}</p>
-            <a href="/projects" className="text-blue-500 hover:underline mt-4 inline-block">
+            <Link href="/projects" className="text-blue-500 hover:underline mt-4 inline-block">
                 返回專案列表
-            </a>
+            </Link>
         </div>
     );
 }
