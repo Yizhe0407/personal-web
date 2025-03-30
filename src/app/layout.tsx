@@ -35,11 +35,11 @@ export default function RootLayout({
             <div className="flex flex-1 overflow-hidden">
               <TopBar />
               <Sidebar />
-              <div className="flex flex-1 justify-center py-32 sm:py-8 w-full h-full px-6 overflow-y-auto paragraph">
-                <div className="flex flex-col">
-                  {children}
-                  <div className="flex justify-center w-full mt-4 font-bold text-gray-500">© 2023 liao yizhe</div>
-                  <div className="flex justify-center w-full font-bold text-gray-500">　</div>
+              <div className="flex flex-col flex-1 justify-between pt-32 pb-4 sm:p-8 w-full h-full px-6 overflow-y-auto paragraph">
+                <div className="flex-grow">{children}</div>
+                <div className="flex flex-col items-center w-full mt-4 font-bold text-gray-500">
+                  <span>© 2023 liao yizhe</span>
+                  {/* <span>&nbsp;</span> */}
                 </div>
               </div>
             </div>
